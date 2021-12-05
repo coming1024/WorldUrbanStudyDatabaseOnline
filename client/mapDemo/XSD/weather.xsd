@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="resp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="city"/>
+        <xs:element ref="updatetime"/>
+        <xs:element ref="wendu"/>
+        <xs:element ref="fengli"/>
+        <xs:element ref="shidu"/>
+        <xs:element ref="fengxiang"/>
+        <xs:element ref="sunrise_1"/>
+        <xs:element ref="sunset_1"/>
+        <xs:element ref="sunrise_2"/>
+        <xs:element ref="sunset_2"/>
+        <xs:element ref="yesterday"/>
+        <xs:element ref="forecast"/>
+        <xs:element ref="zhishus"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="city" type="xs:NCName"/>
+  <xs:element name="updatetime" type="xs:NMTOKEN"/>
+  <xs:element name="wendu" type="xs:integer"/>
+  <xs:element name="shidu" type="xs:string"/>
+  <xs:element name="sunrise_1" type="xs:NMTOKEN"/>
+  <xs:element name="sunset_1" type="xs:NMTOKEN"/>
+  <xs:element name="sunrise_2">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="sunset_2">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="yesterday">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="date_1"/>
+        <xs:element ref="high_1"/>
+        <xs:element ref="low_1"/>
+        <xs:element ref="day_1"/>
+        <xs:element ref="night_1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="date_1" type="xs:NMTOKEN"/>
+  <xs:element name="high_1" type="xs:string"/>
+  <xs:element name="low_1" type="xs:string"/>
+  <xs:element name="day_1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="type_1"/>
+        <xs:element ref="fx_1"/>
+        <xs:element ref="fl_1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="night_1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="type_1"/>
+        <xs:element ref="fx_1"/>
+        <xs:element ref="fl_1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="forecast">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="weather"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="weather">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="date"/>
+        <xs:element ref="high"/>
+        <xs:element ref="low"/>
+        <xs:element ref="day"/>
+        <xs:element ref="night"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="date" type="xs:NMTOKEN"/>
+  <xs:element name="high" type="xs:string"/>
+  <xs:element name="low" type="xs:string"/>
+  <xs:element name="day">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="type"/>
+        <xs:element ref="fengxiang"/>
+        <xs:element ref="fengli"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="night">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="type"/>
+        <xs:element ref="fengxiang"/>
+        <xs:element ref="fengli"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zhishus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="zhishu"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zhishu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="value"/>
+        <xs:element ref="detail"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:NCName"/>
+  <xs:element name="value" type="xs:NCName"/>
+  <xs:element name="detail" type="xs:string"/>
+  <xs:element name="fengli" type="xs:NMTOKEN"/>
+  <xs:element name="fengxiang" type="xs:NCName"/>
+  <xs:element name="type_1" type="xs:NCName"/>
+  <xs:element name="fx_1" type="xs:NCName"/>
+  <xs:element name="fl_1" type="xs:NMTOKEN"/>
+  <xs:element name="type" type="xs:NCName"/>
+</xs:schema>

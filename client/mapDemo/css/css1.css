@@ -1,0 +1,11 @@
+body,html,#allmap {width: 500px;height: 500px;overflow: hidden;margin:0;font-family:"微软雅黑";float:left}
+
+.dowebok ::-webkit-input-placeholder { font-size: 18px; line-height: 1.4; color: #fff;}
+
+.dowebok :-moz-placeholder { font-size: 18px; line-height: 1.4; color: #fff;}
+
+.dowebok ::-moz-placeholder { font-size: 18px; line-height: 1.4; color: #fff;}
+
+.dowebok :-ms-input-placeholder { font-size: 18px; line-height: 1.4; color: #fff;}
+
+darkslateblue

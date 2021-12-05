@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "msg": {
+        "type": "string"
+      },
+      "code": {
+        "type": "integer"
+      },
+      "newslist": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "picUrl": {
+              "type": "string"
+            },
+            "ctime": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
